@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>All Book</h2>
+    <ul>
+        {% for book in allBook %}
+            <li><a href="{% url 'book-deital' book.slug %}">{{ book.title }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'feedback' %}">Feedback</a>
+</body>
+</html>

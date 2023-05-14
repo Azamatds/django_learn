@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>  Меню </title>
+</head>
+<body>
+
+    {% for zodiac in zodiacs %}
+      <a href="{% url 'horoscope-name' sign_of_zodiac=zodiac %}">{{ zodiac|title}}</a>
+    {% endfor %}
+</body>
+</html>
